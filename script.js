@@ -51,23 +51,23 @@ function updateStars() {
 const button = document.getElementById("valentinesButton");
 
 button.addEventListener("click", () => {
-  if (button.textContent === "Click Me! ❤") {
-    button.textContent = "loading...";
-    fetch('send_mail.php')
-      .then(response => {
-        if (response.ok) {
-          button.textContent = "Check Your Email 🙃";
-        } else {
-          console.error('Failed to send email');
-          button.textContent = "Error 😞";
-        }
-      })
-      .catch(error => {
-        // Handle network errors or other issues
-        console.error('Error:', error);
-        button.textContent = "Error 😞";
-      });
-  }
+    if (button.textContent === "Click Me! ❤") {
+        button.textContent = "loading...";
+        fetch('send_mail.php')
+            .then(response => {
+                if (response.ok) {
+                    button.textContent = "Check Your Email 🙃";
+                } else {
+                    console.error('Failed to send email');
+                    button.textContent = "Error 😞";
+                }
+            })
+            .catch(error => {
+                // Handle network errors or other issues
+                console.error('Error:', error);
+                button.textContent = "Error 😞";
+            });
+    }
 });
 
 function drawTextWithLineBreaks(lines, x, y, fontSize, lineHeight) {
@@ -89,167 +89,127 @@ function drawText() {
     context.shadowOffsetX = 0;
     context.shadowOffsetY = 0;
 
-    if (frameNumber < 150) {
+    var speedFactor = 0.01 * 30 / frameRate;  // Adjust the speed factor
+
+    if (frameNumber < 60) {  // Adjust the frame numbers to change the speed
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-        context.fillText("🎀ZAGARAA'S Surprice🎉", canvas.width / 2, canvas.height / 2);
-        opacity += 0.01;
+        context.fillText("🎀ZAGARAA'S Surprise🎉", canvas.width / 2, canvas.height / 2);
+        opacity += speedFactor;
     }
 
-    // fades out the text by decreasing the opacity
-    if (frameNumber >= 250 && frameNumber < 250) {
+    if (frameNumber >= 60 && frameNumber < 100) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-        context.fillText("🎀ZAGARAA'S Surprice🎉", canvas.width / 2, canvas.height / 2);
-        opacity -= 0.01;
+        context.fillText("🎀ZAGARAA'S Surprise🎉", canvas.width / 2, canvas.height / 2);
+        opacity -= speedFactor;
     }
 
-    if (frameNumber == 500) {
+    if (frameNumber == 100) {
         opacity = 0;
     }
 
-    if (frameNumber > 500 && frameNumber < 750) {
+    if (frameNumber > 100 && frameNumber < 140) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-
-        if (window.innerWidth < 600) {  // shortens long sentence for mobile screens
-            drawTextWithLineBreaks(["amongst trillions and trillions of stars"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
-        } else {
-            context.fillText("amongst trillions and trillions of stars", canvas.width / 2, canvas.height / 2);
-        }
-
-        opacity += 0.01;
-    }
-
-    if (frameNumber >= 750 && frameNumber < 1000) {
-        context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-
         if (window.innerWidth < 600) {
             drawTextWithLineBreaks(["amongst trillions and trillions of stars"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
             context.fillText("amongst trillions and trillions of stars", canvas.width / 2, canvas.height / 2);
         }
-
-        opacity -= 0.01;
+        opacity += speedFactor;
     }
 
-    if (frameNumber == 1000) {
+    if (frameNumber >= 140 && frameNumber < 180) {
+        context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
+        if (window.innerWidth < 600) {
+            drawTextWithLineBreaks(["amongst trillions and trillions of stars"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+        } else {
+            context.fillText("amongst trillions and trillions of stars", canvas.width / 2, canvas.height / 2);
+        }
+        opacity -= speedFactor;
+    }
+
+    if (frameNumber == 180) {
         opacity = 0;
     }
 
-    if (frameNumber > 1000 && frameNumber < 1250) {
+    if (frameNumber > 180 && frameNumber < 220) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("You have a really cute smile🥰.", canvas.width / 2, canvas.height / 2);
-        opacity += 0.01;
+        opacity += speedFactor;
     }
 
-    if (frameNumber >= 1250 && frameNumber < 1500) {
+    if (frameNumber >= 220 && frameNumber < 260) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("You have a really cute smile🥰.", canvas.width / 2, canvas.height / 2);
-        opacity -= 0.01;
+        opacity -= speedFactor;
     }
 
-    if (frameNumber == 1500) {
+    if (frameNumber == 260) {
         opacity = 0;
     }
 
-    if (frameNumber > 1500 && frameNumber < 1750) {
+    if (frameNumber > 260 && frameNumber < 300) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("so knowledgeable", canvas.width / 2, canvas.height / 2);
-        opacity += 0.01;
+        opacity += speedFactor;
     }
 
-    if (frameNumber >= 1750 && frameNumber < 2000) {
+    if (frameNumber >= 300 && frameNumber < 340) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("so knowledgeable", canvas.width / 2, canvas.height / 2);
-        opacity -= 0.01;
+        opacity -= speedFactor;
     }
 
-    if (frameNumber == 2000) {
+    if (frameNumber == 340) {
         opacity = 0;
     }
 
-    if (frameNumber > 2000 && frameNumber < 2250) {
+    if (frameNumber > 340 && frameNumber < 380) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-
         if (window.innerWidth < 600) {
             drawTextWithLineBreaks(["Very beautiful eyes🤩"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
             context.fillText("Very beautiful eyes🤩", canvas.width / 2, canvas.height / 2);
         }
-
-        opacity += 0.01;
+        opacity += speedFactor;
     }
 
-    if (frameNumber >= 2250 && frameNumber < 2500) {
+    if (frameNumber >= 380 && frameNumber < 420) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-
         if (window.innerWidth < 600) {
             drawTextWithLineBreaks(["Very beautiful eyes🤩"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
             context.fillText("Very beautiful eyes🤩", canvas.width / 2, canvas.height / 2);
         }
-
-        opacity -= 0.01;
+        opacity -= speedFactor;
     }
 
-    if (frameNumber == 2500) {
+    if (frameNumber == 420) {
         opacity = 0;
     }
 
-    if (frameNumber > 2500 && frameNumber < 99999) {
+    if (frameNumber > 420 && frameNumber < 460) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-
         if (window.innerWidth < 600) {
             drawTextWithLineBreaks(["You really like me. {YESUU}"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
             context.fillText("You really like me. {YESUU}", canvas.width / 2, canvas.height / 2);
         }
-
-        opacity += 0.01;
+        opacity += speedFactor;
     }
 
-    if (frameNumber >= 2750 && frameNumber < 99999) {
-        context.fillStyle = `rgba(45, 45, 255, ${secondOpacity})`;
-
+    if (frameNumber >= 460 && frameNumber < 500) {
+        context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         if (window.innerWidth < 600) {
             drawTextWithLineBreaks(["❤️Mundag zaluu shvv❤️"], canvas.width / 2, (canvas.height / 2 + 60), fontSize, lineHeight);
         } else {
             context.fillText("❤️Mundag zaluu shvv❤️", canvas.width / 2, (canvas.height / 2 + 50));
         }
-
-        secondOpacity += 0.01;
+        opacity += speedFactor;
     }
 
-    if (frameNumber >= 3000 && frameNumber < 99999) {
-        context.fillStyle = `rgba(45, 45, 255, ${thirdOpacity})`;
+    if (frameNumber >= 500 && frameNumber < 540) {
+        context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("Happy Valentine's Day ❤", canvas.width / 2, (canvas.height / 2 + 120));
-        thirdOpacity += 0.01;
+        opacity += speedFactor;
 
-        button.style.display = "block";
-    }
-
-     // Reset the shadow effect after drawing the text
-     context.shadowColor = "transparent";
-     context.shadowBlur = 0;
-     context.shadowOffsetX = 0;
-     context.shadowOffsetY = 0;
-}
-
-function draw() {
-    context.putImageData(baseFrame, 0, 0);
-
-    drawStars();
-    updateStars();
-    drawText();
-
-    if (frameNumber < 99999) {
-        frameNumber++;
-    }
-    window.requestAnimationFrame(draw);
-}
-
-window.addEventListener("resize", function () {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    baseFrame = context.getImageData(0, 0, window.innerWidth, window.innerHeight);
-});
-
-window.requestAnimationFrame(draw);
+       
