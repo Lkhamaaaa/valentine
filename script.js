@@ -30,7 +30,7 @@ var thirdOpacity = 0;
 var baseFrame = context.getImageData(0, 0, window.innerWidth, window.innerHeight);
 
 function drawStars() {
-    for (var i = 0; stars > i; i++) {
+    for (var i = 0; i < stars; i++) {
         var star = starArray[i];
 
         context.beginPath();
@@ -87,16 +87,18 @@ function drawText() {
     context.shadowOffsetX = 0;
     context.shadowOffsetY = 0;
 
+    var speedFactor = 0.02;
+
     if (frameNumber < 60) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("🎀ZAGARAA'S Surprise🎉", canvas.width / 2, canvas.height / 2);
-        opacity += 0.02;
+        opacity += speedFactor;
     }
 
     if (frameNumber >= 60 && frameNumber < 100) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("🎀ZAGARAA'S Surprise🎉", canvas.width / 2, canvas.height / 2);
-        opacity -= 0.02;
+        opacity -= speedFactor;
     }
 
     if (frameNumber === 100) {
@@ -110,7 +112,7 @@ function drawText() {
         } else {
             context.fillText("amongst trillions and trillions of stars", canvas.width / 2, canvas.height / 2);
         }
-        opacity += 0.02;
+        opacity += speedFactor;
     }
 
     if (frameNumber >= 140 && frameNumber < 180) {
@@ -120,7 +122,7 @@ function drawText() {
         } else {
             context.fillText("amongst trillions and trillions of stars", canvas.width / 2, canvas.height / 2);
         }
-        opacity -= 0.02;
+        opacity -= speedFactor;
     }
 
     if (frameNumber === 180) {
@@ -130,13 +132,13 @@ function drawText() {
     if (frameNumber > 180 && frameNumber < 220) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("You have a really cute smile🥰.", canvas.width / 2, canvas.height / 2);
-        opacity += 0.02;
+        opacity += speedFactor;
     }
 
     if (frameNumber >= 220 && frameNumber < 260) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("You have a really cute smile🥰.", canvas.width / 2, canvas.height / 2);
-        opacity -= 0.02;
+        opacity -= speedFactor;
     }
 
     if (frameNumber === 260) {
@@ -146,13 +148,13 @@ function drawText() {
     if (frameNumber > 260 && frameNumber < 300) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("so knowledgeable", canvas.width / 2, canvas.height / 2);
-        opacity += 0.02;
+        opacity += speedFactor;
     }
 
     if (frameNumber >= 300 && frameNumber < 340) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("so knowledgeable", canvas.width / 2, canvas.height / 2);
-        opacity -= 0.02;
+        opacity -= speedFactor;
     }
 
     if (frameNumber === 340) {
@@ -166,7 +168,7 @@ function drawText() {
         } else {
             context.fillText("You give me a sense of peace.", canvas.width / 2, canvas.height / 2);
         }
-        opacity += 0.02;
+        opacity += speedFactor;
     }
 
     if (frameNumber >= 380 && frameNumber < 420) {
@@ -176,7 +178,7 @@ function drawText() {
         } else {
             context.fillText("You give me a sense of peace.", canvas.width / 2, canvas.height / 2);
         }
-        opacity -= 0.02;
+        opacity -= speedFactor;
     }
 
     if (frameNumber === 420) {
@@ -190,7 +192,7 @@ function drawText() {
         } else {
             context.fillText("Just... thank you for being you. {YESUU}", canvas.width / 2, canvas.height / 2);
         }
-        opacity += 0.02;
+        opacity += speedFactor;
     }
 
     if (frameNumber >= 460 && frameNumber < 500) {
@@ -200,14 +202,16 @@ function drawText() {
         } else {
             context.fillText("❤️Mundag zaluu shvv❤️", canvas.width / 2, canvas.height / 2 + 50);
         }
-        secondOpacity += 0.02;
+        secondOpacity += speedFactor;
     }
 
     if (frameNumber >= 500 && frameNumber < 540) {
         context.fillStyle = `rgba(45, 45, 255, ${thirdOpacity})`;
         context.fillText("Happy Valentine's Day ❤", canvas.width / 2, canvas.height / 2 + 120);
-        thirdOpacity += 0.02;
+        thirdOpacity += speedFactor;
     }
 
     context.shadowColor = "transparent";
-    context.shadow
+    context.shadowBlur = 0;
+    context.shadowOffsetX = 0;
+   
