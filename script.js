@@ -96,17 +96,17 @@ function drawText() {
     }
 
     // fades out the text by decreasing the opacity
-    if (frameNumber >= 150 && frameNumber < 300) {
+    if (frameNumber >= 250 && frameNumber < 250) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("🎀ZAGARAA'S Surprice🎉", canvas.width / 2, canvas.height / 2);
         opacity -= 0.01;
     }
 
-    if (frameNumber == 150) {
+    if (frameNumber == 500) {
         opacity = 0;
     }
 
-    if (frameNumber > 300 && frameNumber < 450) {
+    if (frameNumber > 500 && frameNumber < 750) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
 
         if (window.innerWidth < 600) {  // shortens long sentence for mobile screens
@@ -118,7 +118,7 @@ function drawText() {
         opacity += 0.01;
     }
 
-    if (frameNumber >= 450 && frameNumber < 600) {
+    if (frameNumber >= 750 && frameNumber < 1000) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
 
         if (window.innerWidth < 600) {
@@ -134,13 +134,13 @@ function drawText() {
         opacity = 0;
     }
 
-    if (frameNumber > 600 && frameNumber < 750) {
+    if (frameNumber > 1000 && frameNumber < 1250) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("You have a really cute smile🥰.", canvas.width / 2, canvas.height / 2);
         opacity += 0.01;
     }
 
-    if (frameNumber >= 750 && frameNumber < 900) {
+    if (frameNumber >= 1250 && frameNumber < 1500) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("You have a really cute smile🥰.", canvas.width / 2, canvas.height / 2);
         opacity -= 0.01;
@@ -150,13 +150,13 @@ function drawText() {
         opacity = 0;
     }
 
-    if (frameNumber > 1050 && frameNumber < 1200) {
+    if (frameNumber > 1500 && frameNumber < 1750) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("so knowledgeable", canvas.width / 2, canvas.height / 2);
         opacity += 0.01;
     }
 
-    if (frameNumber >= 1200 && frameNumber < 1350) {
+    if (frameNumber >= 1750 && frameNumber < 2000) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("so knowledgeable", canvas.width / 2, canvas.height / 2);
         opacity -= 0.01;
@@ -166,19 +166,19 @@ function drawText() {
         opacity = 0;
     }
 
-    if (frameNumber > 1350 && frameNumber < 1500) {
+    if (frameNumber > 2000 && frameNumber < 2250) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
 
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["Very beautiful eyes"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["Very beautiful eyes🤩"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("Very beautiful eyes", canvas.width / 2, canvas.height / 2);
+            context.fillText("Very beautiful eyes🤩", canvas.width / 2, canvas.height / 2);
         }
 
         opacity += 0.01;
     }
 
-    if (frameNumber >= 1500 && frameNumber < 1650) {
+    if (frameNumber >= 2250 && frameNumber < 2500) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
 
         if (window.innerWidth < 600) {
@@ -194,7 +194,7 @@ function drawText() {
         opacity = 0;
     }
 
-    if (frameNumber > 1650 && frameNumber < 1800) {
+    if (frameNumber > 2500 && frameNumber < 99999) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
 
         if (window.innerWidth < 600) {
@@ -206,7 +206,7 @@ function drawText() {
         opacity += 0.01;
     }
 
-    if (frameNumber >= 1800 && frameNumber < 1950) {
+    if (frameNumber >= 2750 && frameNumber < 99999) {
         context.fillStyle = `rgba(45, 45, 255, ${secondOpacity})`;
 
         if (window.innerWidth < 600) {
@@ -218,7 +218,7 @@ function drawText() {
         secondOpacity += 0.01;
     }
 
-    if (frameNumber >= 1950 && frameNumber < 2100) {
+    if (frameNumber >= 3000 && frameNumber < 99999) {
         context.fillStyle = `rgba(45, 45, 255, ${thirdOpacity})`;
         context.fillText("Happy Valentine's Day ❤", canvas.width / 2, (canvas.height / 2 + 120));
         thirdOpacity += 0.01;
