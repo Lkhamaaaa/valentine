@@ -91,7 +91,7 @@ function drawText() {
 
     if (frameNumber < 150) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-        context.fillText("🎀ZAGARAA'S Surprices🎉", canvas.width / 2, canvas.height / 2);
+        context.fillText("🎀ZAGARAA'S Surprice🎉", canvas.width / 2, canvas.height / 2);
         opacity += 0.01;
     }
 
