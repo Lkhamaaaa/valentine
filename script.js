@@ -89,14 +89,14 @@ function drawText() {
     context.shadowOffsetX = 0;
     context.shadowOffsetY = 0;
 
-    if (frameNumber < 250) {
+    if (frameNumber < 150) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("🎀ZAGARAA'S Surprices🎉", canvas.width / 2, canvas.height / 2);
         opacity += 0.01;
     }
 
     // fades out the text by decreasing the opacity
-    if (frameNumber >= 250 && frameNumber < 500) {
+    if (frameNumber >= 150 && frameNumber < 300) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         context.fillText("🎀ZAGARAA'S Surprice🎉", canvas.width / 2, canvas.height / 2);
         opacity -= 0.01;
@@ -170,9 +170,9 @@ function drawText() {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
 
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["Very beautiful eyes🤩"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["Very beautiful eyes"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("Very beautiful eyes🤩", canvas.width / 2, canvas.height / 2);
+            context.fillText("Very beautiful eyes", canvas.width / 2, canvas.height / 2);
         }
 
         opacity += 0.01;
