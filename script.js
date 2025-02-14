@@ -166,9 +166,9 @@ function drawText() {
     if (frameNumber > 340 && frameNumber < 380) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["Very beautiful eyes🤩"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["You give me a sense of peace."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("Very beautiful eyes🤩", canvas.width / 2, canvas.height / 2);
+            context.fillText("You give me a sense of peace.", canvas.width / 2, canvas.height / 2);
         }
         opacity += speedFactor;
     }
@@ -176,9 +176,9 @@ function drawText() {
     if (frameNumber >= 380 && frameNumber < 420) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["Very beautiful eyes🤩"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["You give me a sense of peace."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("Very beautiful eyes🤩", canvas.width / 2, canvas.height / 2);
+            context.fillText("You give me a sense of peace.", canvas.width / 2, canvas.height / 2);
         }
         opacity -= speedFactor;
     }
@@ -190,9 +190,9 @@ function drawText() {
     if (frameNumber > 420 && frameNumber < 460) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["You really like me. {YESUU}"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["Just... thank you for being you. {YESUU}"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("You really like me. {YESUU}", canvas.width / 2, canvas.height / 2);
+            context.fillText("Just... thank you for being you. {YESUU}", canvas.width / 2, canvas.height / 2);
         }
         opacity += speedFactor;
     }
